@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Git Repo - jc-s-prototype"
+echo "Git Repo - management"
 
 # Display menu
 echo "Please choose an option:"
@@ -23,9 +23,6 @@ case $choice in
         git push
         ;;
     3)
-        echo "Currently Disabled. Exiting..."
-        exit 1
-
         # Option 3: Add ALL & Commit & Push to remote repository
         read -p "Enter commit message: " message
         git add .

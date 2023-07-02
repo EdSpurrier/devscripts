@@ -25,7 +25,7 @@ case $choice in
         read -p "Enter the new component name: " new_component_name
 
         # Construct the destination folder path
-        destination_folder="${destination_app_folder}/components/${new_component_name}"
+        destination_folder="${destination_app_folder}/components/vision-search/${new_component_name}"
 
         # Check if the destination folder already exists
         if [ -d "$destination_folder" ]; then
@@ -50,7 +50,7 @@ case $choice in
         done
 
         # Append a component to index.ts
-        echo "export * from './${new_component_name}'" >> ${destination_app_folder}/components/index.ts
+        echo "export * from './vision-search/${new_component_name}'" >> ${destination_app_folder}/components/index.ts
         ;;
     2)
         # Option 2: Create a Section

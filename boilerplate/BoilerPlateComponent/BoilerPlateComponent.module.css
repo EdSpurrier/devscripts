@@ -1,48 +1,7 @@
+:root {
+  --wrapper-padding: var(--spacing-24px);
+}
+
 .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  max-width: 185px;
-  width: 100%;
-  background: var(--color-text-primary-blue);
-  color: white;
-  cursor: pointer;
-  user-select: none;
-  transition: 0.35s;
-  font-size: 11px;
-}
-
-.wrapper:hover {
-  transform: scale(1.05);
-}
-
-.inactive, .inactive:hover {
-  background: var(--color-state-inactive);
-  color: black;
-  pointer-events: none; 
-  -webkit-user-select: none; 
-  -moz-user-select: none; 
-  -ms-user-select: none; 
-  user-select: none;
-}
-
-
-.success, .success:hover {
-  background: var(--color-state-success);
-  color: black;
-}
-
-.processing, .processing:hover {
-  background: var(--color-state-warning);
-  color: black;
-}
-
-.error, .error:hover {
-  background: var(--color-state-critical);
-  color: white;
-}
-
-.icon {
-  margin-right: 10px;
+  padding: var(--wrapper-padding);
 }
