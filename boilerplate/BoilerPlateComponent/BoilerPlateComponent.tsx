@@ -12,7 +12,11 @@ const BoilerPlateComponent = ({
 
   return (
     <div 
-      className={classNames(styles.wrapper, 'rounded-lg', className)}
+      className={classNames(
+        styles.root,
+        styles.wrapper, 
+        'rounded-lg', 
+        className)}
       onClick={()=>{onClick()}}
     >
       {children}

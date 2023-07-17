@@ -50,7 +50,7 @@ case $choice in
         done
 
         # Append a component to index.ts
-        echo "export * from './vision-search/${new_component_name}'" >> ${destination_app_folder}/components/index.ts
+        echo "export * from './${new_component_name}'" >> ${destination_app_folder}/components/vision-search/index.ts
         ;;
     2)
         # Option 2: Create a Section

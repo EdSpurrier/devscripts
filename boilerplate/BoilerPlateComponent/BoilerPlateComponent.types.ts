@@ -5,6 +5,6 @@ export interface BoilerPlateComponentProps {
   onClick?: () => void,
   children?: ReactNode,
   active?: boolean,
-  className?: string[],
+  className?: string,
   state?: string
 }
