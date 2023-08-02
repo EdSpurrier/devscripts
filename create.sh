@@ -25,7 +25,7 @@ case $choice in
         read -p "Enter the new component name: " new_component_name
 
         # Construct the destination folder path
-        destination_folder="${destination_app_folder}/components/vision-search/${new_component_name}"
+        destination_folder="${destination_app_folder}/components/${new_component_name}"
 
         # Check if the destination folder already exists
         if [ -d "$destination_folder" ]; then
@@ -50,12 +50,50 @@ case $choice in
         done
 
         # Append a component to index.ts
-        echo "export * from './${new_component_name}'" >> ${destination_app_folder}/components/vision-search/index.ts
+        echo "export * from './${new_component_name}'" >> ${destination_app_folder}/components/index.ts
         ;;
     2)
         # Option 2: Create a Section
-        echo "Create a Section => Currently Disabled. Exiting..."
-        exit 1
+
+        # Define the source folder
+        source_folder="${boilerplate_folder}BoilerPlateSection"
+
+        # Prompt the user to enter the destination folder name
+        read -p "Enter the new component name: " new_section_name
+
+        # Construct the destination folder path
+        destination_folder="${destination_app_folder}/sections/${new_section_name}"
+
+        # Check if the destination folder already exists
+        if [ -d "$destination_folder" ]; then
+            echo "Destination folder already exists. Exiting..."
+            exit 1
+        fi
+
+        # Create the destination folder
+        mkdir "$destination_folder"
+
+
+        # Copy the source folder to the destination
+        cp -R "$source_folder"/* "$destination_folder"
+
+        # Change text within the files using sed
+        sed -i "s/BoilerPlateSection/${new_section_name}/g" "$destination_folder"/*.*
+
+        # Rename files within the destination folder
+        for file in "$destination_folder"/*; do
+            new_name="${file//BoilerPlateSection/$new_section_name}"
+            mv "$file" "$new_name"
+        done
+
+        # Append a component to index.ts
+        echo ""
+        echo ""
+        echo "[!IMPORTANT!]"
+        echo "!>> Please add section to the /sections/index.ts <<!"
+        echo "[!IMPORTANT!]"
+        echo ""
+        echo ""
         ;;
     3)
         # Option 3: Create a Section
