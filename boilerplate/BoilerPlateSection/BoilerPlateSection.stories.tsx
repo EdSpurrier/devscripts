@@ -1,12 +1,12 @@
 import { Meta, StoryFn } from '@storybook/react'
 import { BoilerPlateSection } from './BoilerPlateSection'
-import { boilerPlateSectionMock } from './BoilerPlateSection.mock'
+import { BoilerPlateSectionMock } from './BoilerPlateSection.mock'
 import { BoilerPlateSectionProps } from './BoilerPlateSection.types'
 
 export default {
   title: 'Sections/BoilerPlateSection',
   component: BoilerPlateSection,
-  args: boilerPlateSectionMock,
+  args: BoilerPlateSectionMock,
 } as Meta
 
 export const Defaultstory: StoryFn<BoilerPlateSectionProps> = (args) => {
@@ -14,4 +14,4 @@ export const Defaultstory: StoryFn<BoilerPlateSectionProps> = (args) => {
 }
 
 Defaultstory.storyName = 'Default'
-Defaultstory.args = boilerPlateSectionMock
+Defaultstory.args = BoilerPlateSectionMock

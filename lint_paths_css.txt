@@ -1,0 +1,15 @@
+./components/MakerHubCreateProjectTitle/
+./sections/MakerHubCreateProjectDetails/
+./mock-pages/makerhub-create-project/
+./makerhub/
+./components/DifficultyRating/
+./components/ProjectTitle/
+./components/MakerHubProjectCard/
+./sections/MakerHubCreateProjectControls/
+./sections/MakerHubCreateProjectSteps/
+./components/MakerHubCreateProjectUploader/
+./components/FileDropZone/
+./components/FileSelectorButton/
+./components/MakerHubCreateProjectTips/
+./components/MakerHubCreateProjectStep/
+./components/DragAndSortList/

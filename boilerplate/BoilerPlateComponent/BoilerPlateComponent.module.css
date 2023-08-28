@@ -1,7 +1,3 @@
 .root {
-  --wrapper-padding: var(--spacing-24px);
-}
-
-.wrapper {
-  padding: var(--wrapper-padding);
+  background: red;
 }

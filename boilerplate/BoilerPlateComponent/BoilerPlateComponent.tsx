@@ -5,7 +5,6 @@ import { BoilerPlateComponentProps } from './BoilerPlateComponent.types'
 
 const BoilerPlateComponent = ({
   children,
-  onClick = () => {alert('Not Connected!')},
   className,
 }: BoilerPlateComponentProps) => {
 
@@ -14,10 +13,8 @@ const BoilerPlateComponent = ({
     <div 
       className={classNames(
         styles.root,
-        styles.wrapper, 
-        'rounded-lg', 
-        className)}
-      onClick={()=>{onClick()}}
+        className
+      )}
     >
       {children}
     </div>

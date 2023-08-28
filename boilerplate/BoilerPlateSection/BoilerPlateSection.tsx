@@ -10,14 +10,14 @@ import styles from './BoilerPlateSection.module.css'
 import { BoilerPlateSectionProps } from './BoilerPlateSection.types'
 
 export const BoilerPlateSection = ({
-
+  width = 'narrow',
 }: BoilerPlateSectionProps) => {
 
 
   return (
-    <SectionContainer width='full'>
-      <div className={styles.wrapper}>
-        
+    <SectionContainer width={width}>
+      <div className={styles.root}>
+        BoilerPlateSection
       </div>
     </SectionContainer>
   )
