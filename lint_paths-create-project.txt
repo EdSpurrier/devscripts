@@ -1,6 +1,4 @@
-./components/MakerHubCreateProjectTitle/
-./mock-pages/makerhub-create-project/
-./makerhub/
+./components/index.ts
 ./components/DifficultyRating/
 ./components/SortableList/
 ./components/FileDropZone/
@@ -23,6 +21,11 @@
 ./components/MakerHubProjectYouTubePlayer/
 ./components/MaterialsList/
 ./components/ProjectTitle/
+./makerhub/
+./mock-data/project.mock.ts
+./mock-data/makerHubCreateProject.mock.ts
+./mock-pages/makerhub-create-project/
+./sections/index.ts
 ./sections/MakerHubCreateProjectControls/
 ./sections/MakerHubCreateProjectSteps/
 ./sections/MakerHubCreateProjectDetails/
